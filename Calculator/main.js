@@ -29,16 +29,21 @@ calcSym.forEach((sym)=>{
  let numbers=[]
     let operators=[]
 
-    function finalOut(){
+function finalOut(){
         let n=calcBox.value
         let current=""
         for (i=0;i<n.length;i++){
     
-         if(n[i]=="+"||n[i]=="-"){
-            operators.push(n[i])
-            numbers.push(current)
-            current=""
-        }
+         if(
+    n[i] == "+" ||
+    n[i] == "-" ||
+    n[i] == "*" ||
+    n[i] == "/"
+){
+    operators.push(n[i]);
+    numbers.push(current);
+    current = "";
+}
         
         else{
         current+=n[i]
@@ -51,20 +56,32 @@ calcSym.forEach((sym)=>{
 }
 
 let sum;
-function calculate(){
-    
-    
-    sum=Number(numbers[0])
-    for(x=0;x<operators.length;x++){
-    if(operators[x]=="+"){
-    sum+=Number(numbers[x+1])
-    
-    }
-    
-    
-}
-console.log(sum)
 
+
+function calculate() {
+
+    sum = Number(numbers[0]);
+
+    for (let x = 0; x < operators.length; x++) {
+
+        if (operators[x] === "+") {
+            sum += Number(numbers[x + 1]);
+        }
+        else if (operators[x] === "-") {
+            sum -= Number(numbers[x + 1]);
+        }
+        else if (operators[x] === "*") {
+            sum *= Number(numbers[x + 1]);
+        }
+        else if (operators[x] === "/") {
+            sum /= Number(numbers[x + 1]);
+        }
+    }
+
+    calcBox.value=sum
+    numbers.splice(0,numbers.length)
+    operators.splice(0,operators.length)
+   
 }
 
 
