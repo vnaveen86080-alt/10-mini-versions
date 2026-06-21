@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(23, 23, 82);
+}
+
+#taskContainer{
+    background-color: rgb(234, 187, 2);
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h1{
+    text-align: center;
+}
+#addingTask{
+    text-align: center;
+    /* border: solid; */
+    margin: auto;
+}
+
+input,button{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+#addBtn{
+    background-color: rgba(6, 32, 231, 0.895);
+    width:50px;
+    color: white;
+}
+#clearBtn{
+    width: 100px;
+    background-color: red;
+    color: white;
+}
+
+.icon{
+    display: block;
+}
+.btnContainer{
+    display: flex;
+    column-gap: 5px;
+}
+
+
+.btntask{
+    /* border: solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dash{
+    text-decoration: line-through;
+}
