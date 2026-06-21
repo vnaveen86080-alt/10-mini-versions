@@ -21,12 +21,7 @@ calcSym.forEach((sym)=>{
     })
 })
 
-
-
-
-
-
- let numbers=[]
+let numbers=[]
     let operators=[]
 
 function finalOut(){
@@ -83,9 +78,7 @@ function calculate() {
     operators.splice(0,operators.length)
    
 }
-
-
-   function del(){
+function del(){
     calcBox.value=""
     numbers.splice(0,numbers.length)
     operators.splice(0,operators.length)
